@@ -14,7 +14,7 @@ body {
 --secondFont:'Lexend Deca' , Georgia;
 font-family: var(--firstFont);
 color: #333;
-  
+padding-top: 94px;
 }
 ul,
 ol {
@@ -27,8 +27,7 @@ a {
 img,
 picture,
 video,
-canvas,
-svg {
+canvas {
   display: block;
   max-width: 100%;
 }
