@@ -1,0 +1,20 @@
+.btn{
+font-family: var(--firstFont);
+ font-weight: 500;
+ font-size: 16px;
+ background:#FB9E1D;
+ padding: 1rem 2rem;
+ border-radius: 5px;
+color: #472A01;
+box-sizing: border-box;
+min-width: 8rem;
+transition: 0.1s;
+}
+
+.btn:focus, .btn:hover {
+ box-shadow: 0px 0px 0px 3px #FDD399 ,0px 0px 0px 4px #FB9E1D ; 
+}
+.btn:disabled{
+  cursor: wait;
+  opacity: 0.6;
+}
