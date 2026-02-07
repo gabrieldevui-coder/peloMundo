@@ -18,7 +18,7 @@ const useForm = (type) => {
       setError('Preencha o campo');
       return false;
     } else if (types[type] && !types[type].regex.test(value)) {
-      setError('Coloque um email valido');
+      setError(types[type].message);
       return false;
     } else {
       setError(null);
@@ -36,7 +36,7 @@ const useForm = (type) => {
     value,
     error,
     onChange,
-    validate: ({ target }) => validate(target.value),
+    validate: () => validate(value),
     onBlur: ({ target }) => validate(target.value),
   };
 };
