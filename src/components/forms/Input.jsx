@@ -1,14 +1,17 @@
 import React from 'react';
 import styles from './Input.module.css';
-const Input = ({ type, value, setValue, label, id }) => {
-  function handleChange({ target }) {
-    setValue(target.value);
-  }
+const Input = ({ type, value, onChange, onBlur, label, id, error }) => {
   return (
     <div className={styles.wrapper}>
       <label htmlFor={id}>{label}</label>
-      <input type={type} value={value} onChange={handleChange} id={id} />
-      <p className={styles.error}>Error</p>
+      <input
+        onBlur={onBlur}
+        type={type}
+        value={value}
+        onChange={onChange}
+        id={id}
+      />
+      {error && <p className={styles.error}>{error}</p>}
     </div>
   );
 };
