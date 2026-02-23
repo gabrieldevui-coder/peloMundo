@@ -5,6 +5,14 @@ const types = {
     regex: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
     message: 'Preencha um email valido',
   },
+  number: {
+    regex: /^[0-9]+$/,
+    message: 'Utilize apenas números.',
+  },
+  date: {
+    regex: /^(0[1-9]|[12][0-9]|3[01])[-/.](0[1-9]|1[012])[-/.](19|20)\d\d$/,
+    message: 'Data inválida. Use o formato DD/MM/AAAA (ex: 25/12/2024).',
+  },
 };
 
 const useForm = (type) => {
@@ -35,6 +43,7 @@ const useForm = (type) => {
   return {
     value,
     error,
+    setValue,
     onChange,
     validate: () => validate(value),
     onBlur: ({ target }) => validate(target.value),
