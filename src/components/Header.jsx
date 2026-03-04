@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Header.module.css';
 import { NavLink } from 'react-router-dom';
 import Logo from '../assets/logo.svg?react';
-import UserIcon from '../assets/user-line.svg?react';
+import UserIcon from '../assets/profile.svg?react';
 import { dataUser } from '../UserContext';
 const Header = () => {
   const { data, userLogout } = React.useContext(dataUser);
