@@ -1,0 +1,150 @@
+.navigate{
+  display: grid;
+  grid-template-columns:repeat(4, 1fr );
+ gap: 24px;
+}
+.navigate svg {
+  width: 24px;
+  height: 24px;
+}
+.navigate a , .navigate button{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+ background: #eeee;
+ width: 48px;
+ height: 48px;
+ align-items: center;
+ justify-content: center;
+ border-radius: 4px;
+ border: 1px solid transparent;
+ cursor: pointer;
+ position: relative;
+ 
+}
+
+.mobileBtn{
+display: flex;
+ width: 48px;
+ height: 48px;
+ background:#eeee ; 
+ border-radius: 4px;
+ justify-content: center;
+ align-items: center;
+ transition: 0.2s;
+}
+.mobileBtn::after{
+content: '';
+display: block;
+width: 1.4rem;
+background: currentColor;
+border-radius: 2px;
+height: 2px;
+box-shadow: 0 6px currentColor, 0 -6px currentColor;
+
+}
+.mobileBtn:focus, .mobileBtn:hover, .mobileActiveBtn {
+ background: white;
+ border-color: #FB9E1D;
+ color: #FB9E1D; 
+ border: solid 1px currentColor;
+}
+.mobileActiveBtn::after{
+transform: rotate(-90deg);
+width: 4px;
+height: 4px;
+box-shadow: 0 8px currentColor, 0 -8px currentColor;
+ transition: .2s;
+}
+.navigate a:hover,
+.navigate a:focus,
+.navigate button:hover,
+.navigate button:focus {
+ background: white;
+ box-shadow: 0 0 3px #eee;
+ border-color: #333;;
+ outline: none;
+
+}
+
+.navigate a:global(.active) {
+  background: white;
+   box-shadow: 0 0 3px #eee;
+ border-color:#FB9E1D;
+}
+
+.navigate a:global(.active) svg * {
+  fill: #FB9E1D;
+}
+
+
+.navigate a::after,
+.navigate button::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: -36px;
+  left: 50%;
+  transform: translateX(-50%);    
+
+  background: #333;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.navigate a:hover::after,
+.navigate button:hover::after,r {
+  opacity: 1;
+  transform: translateX(-50%) translateY(4px);
+}
+
+.navMobile{
+  display: block;
+  position: absolute;
+  top: 70px;
+  right: 0px;
+  padding: 0 1rem ;
+  box-shadow: 0 1px 2px rgba(0, 0 , 0 , 0.3);
+  border-radius: .2rem;
+  transform: translate(-10px);
+  opacity: 0;
+  pointer-events: none;
+    z-index: 100;
+    background: white;
+}
+.navMobileActive {
+  transition: 0.3s;
+  transform: initial;
+  opacity: 1;
+
+    pointer-events: initial;
+}
+
+.navMobile a,
+.navMobile button {
+font-size: 16px;
+color: #333;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  padding: .5rem 0;
+cursor: pointer;
+gap: 12px;
+}
+  .navMobile svg,
+.navMobile svg {
+  width: 28px;
+  height: 28px;
+}
+
+.navMobile a:hover svg > *,
+.navMobile button:hover svg > * {
+  color: #FB9E1D;
+}
+

@@ -1,0 +1,29 @@
+.wrapper{
+  position: relative;
+  display: grid;
+grid-template-columns: 1fr auto;
+  align-items: center;
+  margin-top: 1rem ;
+  margin-bottom: 2rem;
+   z-index: 2;
+}
+.title{
+  position: relative;
+  color:  #333;
+  padding-left: 16px;
+
+}
+
+.title::before {
+  content: '';
+  height: 48px;
+  width: 4px;
+  position: absolute;
+  background: #FB9E1D;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  left: 0;
+  border-radius: 4px;
+}

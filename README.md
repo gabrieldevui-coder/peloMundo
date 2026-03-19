@@ -8,11 +8,11 @@ O **peloMundo** é uma mini rede social focada em viagens. Compartilhe suas expe
 
 Com o peloMundo, os usuários podem se inspirar para a próxima viagem com base em informações relevantes, como:
 
-- Local da viagem  
-- Fotos  
-- Tempo de viagem  
-- Valor gasto  
-- Melhor época do ano para visitar o destino  
+- Local da viagem
+- Fotos
+- Tempo de viagem
+- Valor gasto
+- Melhor época do ano para visitar o destino
 
 ## 🧩 Funcionalidades
 

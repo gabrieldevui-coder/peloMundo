@@ -1,0 +1,23 @@
+.wrapper {
+  padding: 12px 0px;
+}
+
+.wrapper textarea {
+  margin-top: 12px;
+  font-size: 1rem;
+  padding: 12px;
+  width: 100%;
+  min-height: 120px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #F7F6F9;
+  transition: 0.3s;
+  resize: vertical; 
+}
+
+.wrapper textarea:hover,
+.wrapper textarea:focus {
+  outline: none;
+  background: #fff;
+  border-color: #FB9E1D;
+}

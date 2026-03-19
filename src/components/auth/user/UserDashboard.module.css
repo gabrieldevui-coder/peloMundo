@@ -1,0 +1,108 @@
+.container {
+  font-family: "Lexend Deca", sans-serif;
+  padding: 48px;
+  background: #f6f6f6; 
+}
+
+/* KPI */
+
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.kpiCard {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.kpiLabel {
+  font-size: 0.85rem;
+  color: #333;
+  opacity: 0.6;
+}
+
+.kpiValue {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #FB9E1D;
+}
+
+.kpiValueSmall {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 16px;
+}
+
+.cardTitle {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.chartWrapper {
+  width: 100%;
+  height: 280px;
+}
+
+.rankCard {
+  margin-top: 48px;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 16px;
+}
+
+.rankList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rankList li {
+  display: grid;
+  grid-template-columns: 40px 1fr 60px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f2f2f2;
+  align-items: center;
+}
+
+.position {
+  font-weight: 600;
+  color: #FB9E1D;
+}
+
+.rankTitle {
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.rankValue {
+  text-align: right;
+  font-weight: 500;
+  color: #333;
+}
+
+@media (max-width:40rem) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,20 @@
+.title{
+  position: relative;
+  color:  #333;
+  padding-left: 16px;
+margin: 2rem 0;
+}
+
+.title::before {
+  content: '';
+  height: 48px;
+  width: 4px;
+  position: absolute;
+  background: #FB9E1D;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  left: 0;
+  border-radius: 4px;
+}
