@@ -1,0 +1,13 @@
+.btnDelete {
+  padding: 0.3rem 0.6rem;
+  border: solid 2px #ddd;
+  ;
+  border-radius: 4px;
+  transition: 0.1s;
+}
+
+.btnDelete:hover,
+.btnDelete:focus {
+  color: #472A01;
+  border-color: #FB9E1D;
+}

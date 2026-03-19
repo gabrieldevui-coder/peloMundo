@@ -1,0 +1,75 @@
+
+.photo{
+ position: relative;
+    display: grid;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.photo img {
+  grid-area: 1/1;
+   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: 0.3s;
+}
+.photo span {
+   position: absolute; 
+  inset: 0; 
+  background: rgba(0, 0, 0 , 0.3);
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  align-items: center;
+  display: none;
+  justify-content: center;
+  grid-area: 1/1;
+}
+.photo span::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  margin-right: .25rem;
+
+  background: url('../../assets/eye.svg') no-repeat center;
+}
+.photo:hover span {
+  display: flex;
+}
+.photo:nth-child(6n + 1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.photo:nth-child(6n + 4) {
+  grid-row: span 2;
+}
+
+@media (max-width: 60rem) {
+  .feed {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 180px;
+  }
+
+  .photo:nth-child(6n + 1),
+  .photo:nth-child(6n + 4) {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 40rem) {
+  .feed {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 220px;
+  }
+
+  .photo {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+}

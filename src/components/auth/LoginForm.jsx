@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import Input from '../forms/Input';
 import Button from '../forms/Button';
 import useForm from '../../hooks/useForm';
-import Error from '../helper/error';
+import Error from '../helper/Error';
 import { dataUser } from '../../UserContext';
-import Title from '../Title';
+import Head from '../helper/Head';
 const LoginForm = () => {
   const { userLogin, erro, loading } = React.useContext(dataUser);
   const username = useForm();
@@ -22,7 +22,8 @@ const LoginForm = () => {
   }
   return (
     <div className={`${styles.wrapper} animaLeft-Container`}>
-      <Title title="Entrar" />
+      <Head title="Entrar" />
+      <h1 className="title">Entrar</h1>
       <form onSubmit={handleSubmit} className={styles.form}>
         <Input type="text" {...username} label="usuário" id="username" />
         <Input {...password} type="password" label="senha" id="password" />

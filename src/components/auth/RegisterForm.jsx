@@ -1,5 +1,4 @@
 import React from 'react';
-import Title from '../Title';
 import styles from './LoginForm.module.css';
 import useForm from '../../hooks/useForm';
 import Input from '../forms/Input';
@@ -8,7 +7,8 @@ import { Link } from 'react-router-dom';
 import { POST_USER } from '../../api';
 import { dataUser } from '../../UserContext';
 import useFetch from '../../hooks/useFetch';
-import Error from '../helper/error';
+import Error from '../helper/Error';
+import Head from '../helper/Head';
 const RegisterForm = () => {
   const { userLogin } = React.useContext(dataUser);
   const username = useForm();
@@ -28,7 +28,8 @@ const RegisterForm = () => {
   }
   return (
     <section className={`${styles.wrapper} animaLeft-Container`}>
-      <Title title="Cadastrar" />
+      <Head title="Cadastrar" />
+      <h1 className="title">Cadastrar</h1>
       <form onSubmit={handleSubmit} className={styles.form}>
         <Input type="text" {...username} label="Usuário" id="username" />
         <Input type="email" {...email} label="Email" id="email" />

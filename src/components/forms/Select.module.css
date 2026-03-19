@@ -1,0 +1,30 @@
+
+.wrapper {
+  padding: 12px 0px;
+}
+
+.wrapper select {
+
+  font-size: 1rem;
+  width: 100%;
+ padding: 12px 36px 12px 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #F7F6F9;
+  transition: 0.3s;
+  cursor: pointer;
+  appearance: auto;
+}
+
+.wrapper select:hover,
+.wrapper select:focus { 
+  outline: none;
+  border-color: #FB9E1D;
+  background-color: #fff;
+}
+.wrapper label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #999;
+}

@@ -6,8 +6,8 @@ export const dataUser = React.createContext();
 
 export const UserStorage = ({ children }) => {
   const [data, setData] = React.useState('');
-  const [login, setLogin] = React.useState(false);
-  const [loading, setLoading] = React.useState('');
+  const [login, setLogin] = React.useState(null);
+  const [loading, setLoading] = React.useState(null);
   const [erro, setError] = React.useState(null);
 
   const navigate = useNavigate();
@@ -50,7 +50,6 @@ export const UserStorage = ({ children }) => {
           const response = await fetch(url, options);
           if (!response.ok) throw new Error('Token inválido');
           await getUser(token);
-          navigate('/conta');
         } catch (err) {
           userLogout();
         } finally {

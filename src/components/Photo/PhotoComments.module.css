@@ -1,0 +1,29 @@
+.comments {
+  margin-top: 16px;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+
+    max-height: 220px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.comments li {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.author {
+  font-weight: 600;
+  color: #FB9E1D;
+  margin-right: 6px;
+}
+
+.text {
+  color: #333;
+}

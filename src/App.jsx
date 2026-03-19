@@ -8,24 +8,33 @@ import Login from './components/auth/Login';
 import { UserStorage } from './UserContext';
 import User from './components/auth/user/User';
 import ProtectRouter from './components/helper/ProtectRouter';
+import Photo from './components/Photo/Photo';
+import UserProfile from './components/auth/user/UserProfile';
+import NotFound from './components/NotFound';
 function App() {
   return (
-    <div>
+    <div className="App">
       <BrowserRouter>
         <UserStorage>
           <Header />
-          <Routes>
-            <Route path="/" index element={<Home />} />
-            <Route path="/login/*" element={<Login />} />
-            <Route
-              path="/conta/*"
-              element={
-                <ProtectRouter>
-                  <User />
-                </ProtectRouter>
-              }
-            />
-          </Routes>
+          <main className="AppBody">
+            <Routes>
+              <Route path="/" index element={<Home />} />
+              <Route path="/login/*" element={<Login />} />
+              <Route path="*" element={<NotFound />} />
+              <Route path="/login/*" element={<Login />} />
+              <Route path="/foto/:id" element={<Photo />} />
+              <Route path="/perfil/:user" element={<UserProfile />} />
+              <Route
+                path="/conta/*"
+                element={
+                  <ProtectRouter>
+                    <User />
+                  </ProtectRouter>
+                }
+              />
+            </Routes>
+          </main>
           <Footer />
         </UserStorage>
       </BrowserRouter>
